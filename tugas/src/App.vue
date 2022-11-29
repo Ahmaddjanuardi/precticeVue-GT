@@ -2,8 +2,8 @@
   <div id="app">
    <NavbarComponent> </NavbarComponent>
    <BreadcrumbComponentVue></BreadcrumbComponentVue>
-   <GalleyComponentVue></GalleyComponentVue>
-   <SliderComponentVue></SliderComponentVue>
+   <GalleyComponentVue :imageLink="img" ></GalleyComponentVue>
+   <SliderComponentVue @changePicture="ambilDariSlider"></SliderComponentVue>
    <FooterComponentVue></FooterComponentVue>
    <CopyrightComponentVue></CopyrightComponentVue>
   </div>
@@ -27,6 +27,16 @@ export default {
     SliderComponentVue,
     FooterComponentVue,
     CopyrightComponentVue
+  },
+  data(){
+    return{
+    img :"chair"
+    }
+  },
+  methods:{
+    ambilDariSlider : function(cardImage1){
+        this.img = cardImage1
+    }
   }
 }
 </script>

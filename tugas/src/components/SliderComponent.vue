@@ -4,12 +4,14 @@
     <h3>With What We Designed</h3>
     <!-- Ini yang pake for -->
     <div class="d-flex justify-content-between mt-4">
-
+        <!-- <Card v-for="(item, index) in objCard" :key="index" :objCard="item">
+           
+        </Card> -->
         <Card v-for="(item, index) in arrCardTitle"
         :key="index" 
         :cardTitle="item"
         :cardPrice="arrCardPrice[index]" 
-        :cardImage="arrCardImage[index]"></Card>
+        :cardImage="arrCardImage[index]" @changePicture="changePictureFunc"></Card>
     </div>
     <!-- <div class="d-flex justify-content-between mt-4">
         <Card cardTitle="Saman Kakka"
@@ -31,6 +33,12 @@ export default {
 name : "SlideComponent",
 components : {
     Card
+},
+methods : {
+    changePictureFunc : function(cardImage){
+        this.$emit('changePicture', cardImage)
+        //  alert(cardImage)
+    }
 },
 data(){
     return{

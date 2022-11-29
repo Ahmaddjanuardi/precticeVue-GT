@@ -31,7 +31,7 @@
           </div>
           <div class="col-6">
             <img
-              src="../assets/img/chair.png"
+              :src="require('@/assets/img/' + imageLink + '.png')"
               alt=""
               id="imgParent"
             />
@@ -73,7 +73,8 @@
 <script>
 export default{
 
-    name: 'ComponentView'
+    name: 'ComponentView',
+    props: ['imageLink']
 }
 </script>
 
