@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="judul mb-5">
+    <div class="judul my-5">
       <img src="../assets/img/logo.png" alt="" />
     </div>
     <div class="d-flex justify-content-between">

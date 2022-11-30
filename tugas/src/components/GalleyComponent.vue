@@ -40,14 +40,16 @@
             <div class="judul">
               <h3>Chair Thatty</h3>
               <p>IDR 12.000.000</p>
-              <a
-                class="btn btn-light"
-                href="./form_shipping.html"
-                role="button"
-              >
-                <img src="../assets/img/cart3.svg" alt="" />
-                Add to Cart</a
-              >
+              <router-link to="/shipping">
+                <a
+                  class="btn btn-light"
+                  href="./form_shipping.html"
+                  role="button"
+                >
+                  <img src="../assets/img/cart3.svg" alt="" />
+                  Add to Cart</a
+                >
+              </router-link>
               <hr />
             </div>
             <div class="title">
@@ -79,5 +81,8 @@ export default{
 </script>
 
 <style>
-
+#imgParent{
+  height: 609px;
+    width: 560px;
+}
 </style>

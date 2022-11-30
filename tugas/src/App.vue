@@ -1,5 +1,23 @@
 <template>
   <div id="app">
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+export default {
+name : 'App'
+}
+</script>
+
+<style>
+
+</style>
+
+
+
+<!-- <template>
+  <div id="app">
    <NavbarComponent> </NavbarComponent>
    <BreadcrumbComponentVue></BreadcrumbComponentVue>
    <GalleyComponentVue :imageLink="img" ></GalleyComponentVue>
@@ -118,4 +136,4 @@ footer a{
     margin: 0px;
     color: black;
 }
-</style>
+</style> -->

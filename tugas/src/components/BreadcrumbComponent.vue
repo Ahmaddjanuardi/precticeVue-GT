@@ -1,9 +1,9 @@
 <template>
     <div>
         <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="#">Home</a>
-        <a class="breadcrumb-item" href="#">Office Room</a>
-        <span class="breadcrumb-item active" aria-current="page">Detail</span>
+        <router-link to="/detail" class="breadcrumb-item" >Home</router-link>
+        <router-link to="/detail" class="breadcrumb-item" >Detail</router-link>
+        <router-link to="/shipping" class="breadcrumb-item" v-show="breadlink == '/shipping'"> Shipping</router-link>
       </nav>
     </div>
 </template>
@@ -11,6 +11,11 @@
 <script>
 export default {
   name: 'breadcrumbView',
+  data(){
+    return {
+      breadlink : this.$route.path
+    }
+  }
 }
 </script>
 

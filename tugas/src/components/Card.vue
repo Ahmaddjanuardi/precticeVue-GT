@@ -18,6 +18,5 @@ props : ["cardTitle", "cardPrice", "cardImage"]
 }
 </script>
 
-<style>
-
+<style scoped>
 </style>

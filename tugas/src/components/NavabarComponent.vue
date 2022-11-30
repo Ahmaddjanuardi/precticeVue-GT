@@ -16,7 +16,7 @@
          <div class="d-flex justify-content-between" id="navbarSupportedContent">
            <ul class="navbar-nav ms-auto">
              <li class="nav-item">
-               <a class="nav-link" aria-current="page" href="#">Showcase</a>
+               <router-link to="/shipping" class="nav-link" aria-current="page">Shipping</router-link>
              </li>
              <li class="nav-item">
                <a class="nav-link" href="#">Catalog</a>
