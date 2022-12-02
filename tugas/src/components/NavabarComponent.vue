@@ -16,16 +16,13 @@
          <div class="d-flex justify-content-between" id="navbarSupportedContent">
            <ul class="navbar-nav ms-auto">
              <li class="nav-item">
+               <router-link to="" class="nav-link" href="#">Home</router-link>
+             </li>
+             <li class="nav-item">
                <router-link to="/shipping" class="nav-link" aria-current="page">Shipping</router-link>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="#">Catalog</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">Delivery</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">Rewards</a>
+               <router-link to="/ListTable" class="nav-link" href="#">Shipping List</router-link>
              </li>
              <li class="nav-item pt-1">
                <a href="nav-item">

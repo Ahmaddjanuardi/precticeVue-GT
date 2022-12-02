@@ -1,5 +1,6 @@
 import Detail from "./pages/Detail.vue";
-import Shipping from "./pages/Shipping.vue"
+import Shipping from "./pages/Shipping.vue";
+import ShippingList from "./pages/ShippingList.vue";
 export default[
     {
         path:"/detail",
@@ -10,4 +11,8 @@ export default[
         component: Shipping
 
     },
+    {
+        path:"/ListTable",
+        component: ShippingList
+    }
 ];

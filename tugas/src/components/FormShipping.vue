@@ -2,7 +2,7 @@
 <div class="">
     <div class="d-flex justify-content-center my-5">
         <div class="col-md-4">
-          <form
+          <form @submit.prevent="inputShipping" 
             action=""
             class="shipping p-5"
             id="formShipping"
@@ -13,6 +13,7 @@
               <div class="mb-3 col-md-6">
                 <label for="first name">First Name</label>
                 <input
+                  v-model="shippingData.first_name"
                   class="form-control"
                   type="text"
                   placeholder="Enter your first name"
@@ -23,6 +24,7 @@
               <div class="mb-3 col-md-6">
                 <label for="phone number">Phone Number</label>
                 <input
+                  v-model="shippingData.phone_number"
                   class="form-control"
                   type="number"
                   placeholder="Enter Phone number"
@@ -32,6 +34,7 @@
               <div class="mb-3 col-md-6">
                 <label for="last name">Last Name</label>
                 <input
+                  v-model="shippingData.last_name"
                   class="form-control"
                   type="text"
                   placeholder="Enter your last name"
@@ -42,6 +45,7 @@
               <div class="mb-3 col-md-6">
                 <label for="city">City</label>
                 <input
+                  v-model="shippingData.city"
                   class="form-control"
                   type="text"
                   placeholder="Enter city"
@@ -51,6 +55,7 @@
               <div class="mb-3 col-md-6">
                 <label for="first name">Email Address</label>
                 <input
+                  v-model="shippingData.email"
                   class="form-control"
                   type="email"
                   placeholder="Enter email"
@@ -60,6 +65,7 @@
               <div class="mb-3 col-md-6">
                 <label for="postal code">Postal Code</label>
                 <input
+                  v-model="shippingData.postal_code"
                   class="form-control"
                   type="text"
                   placeholder="Enter postal code"
@@ -69,6 +75,7 @@
               <label for="">Address</label>
               <div class="input-group">
                 <textarea
+                  v-model="shippingData.address"
                   class="form-control"
                   name=""
                   id="address"
@@ -103,10 +110,40 @@
 <script>
 
 import Shipping from '@/pages/Shipping.vue';
+import shippingService from '@/service/shippingService';
 export default {
+  data(){
+    return{
+      shippingData:{
+        "first_name" : null,
+        "last_name" : null,
+        "email" : null,
+        "phone_number" : null,
+        "city" : null,
+        "postal_code" : null,
+        "address" : null
+      },
+      success : false
+    }
+  },
 name: 'formView',
 component:{
     Shipping
+},
+methods:{
+  inputShipping(){
+    let data = this.shippingData;
+    shippingService.create(data).then(response => {
+        console.log(data);
+        console.log(response.data);
+        //this.success = true;
+      }).catch(e =>{
+        console.log(e)
+      });
+  },
+  cekInput(){
+    console.log(this.shippingData)
+  }
 }
 }
 </script>
