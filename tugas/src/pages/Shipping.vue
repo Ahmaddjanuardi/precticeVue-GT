@@ -3,6 +3,7 @@
     <NavbarComponent></NavbarComponent>
     <BreadcrumbComponentVue></BreadcrumbComponentVue>
     <FormShippingVue></FormShippingVue>
+    <SuccessFormVue class="d-none"></SuccessFormVue>
     <FooterComponentVue></FooterComponentVue>
     <CopyrightComponentVue></CopyrightComponentVue>
   </div>
@@ -14,6 +15,7 @@
     import FormShippingVue from '../components/FormShipping.vue';
     import FooterComponentVue from '../components/FooterComponent.vue';
     import CopyrightComponentVue from '../components/CopyrightComponent.vue';
+    import SuccessFormVue from '@/components/SuccessForm.vue';
     export default{
         name: 'ShippingPage',
         components: {
@@ -21,8 +23,9 @@
             BreadcrumbComponentVue,
             FormShippingVue,
             FooterComponentVue,
-            CopyrightComponentVue
-        }
+            CopyrightComponentVue,
+            SuccessFormVue
+        },
     }
 </script>
 
